@@ -18,29 +18,29 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.articulos.push(
-      {
-        titulo: 'Curso Web',
-        descripcion:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti officia, quos adipisci cumque enim ab dolores aut velit sequi deserunt explicabo ipsum consequatur perspiciatis rerum recusandae officiis voluptate? Officiis.',
-        fecha: new Date(),
-        usuario: `${this.UsuarioInyectado.usuario.nombre} ${this.UsuarioInyectado.usuario.apellido}`,
-      },
-      {
-        titulo: 'Curso Front',
-        descripcion:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti officia, quos adipisci cumque enim ab dolores aut velit sequi deserunt explicabo ipsum consequatur perspiciatis rerum recusandae officiis voluptate? Officiis.',
-        fecha: new Date('04/25/2019'),
-        usuario: `${this.UsuarioInyectado.usuario.nombre} ${this.UsuarioInyectado.usuario.apellido}`,
-      },
-      {
-        titulo: 'Curso Back',
-        descripcion:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti officia, quos adipisci cumque enim ab dolores aut velit sequi deserunt explicabo ipsum consequatur perspiciatis rerum recusandae officiis voluptate? Officiis.',
-        fecha: new Date('05/10/2019'),
-        usuario: `${this.UsuarioInyectado.usuario.nombre} ${this.UsuarioInyectado.usuario.apellido}`,
-      }
-    );
+    // this.articulos.push(
+    //   {
+    //     titulo: 'Curso Web',
+    //     descripcion:
+    //       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti officia, quos adipisci cumque enim ab dolores aut velit sequi deserunt explicabo ipsum consequatur perspiciatis rerum recusandae officiis voluptate? Officiis.',
+    //     fecha: new Date(),
+    //     usuario: `${this.UsuarioInyectado.usuario.nombre} ${this.UsuarioInyectado.usuario.apellido}`,
+    //   },
+    //   {
+    //     titulo: 'Curso Front',
+    //     descripcion:
+    //       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti officia, quos adipisci cumque enim ab dolores aut velit sequi deserunt explicabo ipsum consequatur perspiciatis rerum recusandae officiis voluptate? Officiis.',
+    //     fecha: new Date('04/25/2019'),
+    //     usuario: `${this.UsuarioInyectado.usuario.nombre} ${this.UsuarioInyectado.usuario.apellido}`,
+    //   },
+    //   {
+    //     titulo: 'Curso Back',
+    //     descripcion:
+    //       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime corrupti officia, quos adipisci cumque enim ab dolores aut velit sequi deserunt explicabo ipsum consequatur perspiciatis rerum recusandae officiis voluptate? Officiis.',
+    //     fecha: new Date('05/10/2019'),
+    //     usuario: `${this.UsuarioInyectado.usuario.nombre} ${this.UsuarioInyectado.usuario.apellido}`,
+    //   }
+    // );
   }
 
   irAlDetalle(articulo: Articulo) {

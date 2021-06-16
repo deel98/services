@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.component';
 import { ArticulosService } from './services/articulos.service';
+import { HttpClientModule } from '@angular/common/http';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { ArticulosService } from './services/articulos.service';
     PerfilComponent,
     ArticuloDetalleComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [UsuarioService, ArticulosService],
   bootstrap: [AppComponent],
 })
