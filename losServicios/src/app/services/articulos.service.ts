@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Articulo } from '../models/articulo';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ArticulosService {
-
-  constructor() { }
+  articulo: Articulo = new Articulo();
+  constructor() {}
 }
