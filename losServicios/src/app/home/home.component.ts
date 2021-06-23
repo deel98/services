@@ -18,9 +18,20 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.ArticuloInyectado.leerNoticias().subscribe((articulos) => {
-      this.articulos = articulos;
+    this.ArticuloInyectado.leerNoticias().subscribe((articulosDesdeApi) => {
+      this.articulos = articulosDesdeApi;
     });
+
+    let articuloEnviar: Articulo = new Articulo();
+    articuloEnviar.body = 'Este es el cuerpo del articulo';
+    articuloEnviar.title = 'Este es de prueba';
+    articuloEnviar.userId = 4;
+    this.ArticuloInyectado.guardarArticulo(articuloEnviar).subscribe(
+      (articuloCreado) => {
+        debugger;
+        this.articulos.push(articuloCreado);
+      }
+    );
   }
 
   irAlDetalle(articulo: Articulo) {

@@ -17,8 +17,8 @@ export class ArticuloDetalleComponent implements OnInit {
 
   ngOnInit() {
     this.ArticuloInyectado.leerUsuaurio(this.articulo.userId).subscribe(
-      (usuario) => {
-        this.usuario = usuario;
+      (usuarioDesdeApi) => {
+        this.usuario = usuarioDesdeApi;
       }
     );
   }

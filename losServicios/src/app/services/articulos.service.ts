@@ -19,4 +19,8 @@ export class ArticulosService {
   leerUsuaurio(userId: number): Observable<User> {
     return this.http.get<User>(this.ruta + '/users/' + userId);
   }
+
+  guardarArticulo(articulo: Articulo): Observable<Articulo> {
+    return this.http.post<Articulo>(this.ruta + '/posts', articulo);
+  }
 }

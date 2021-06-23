@@ -11,6 +11,7 @@ import { ArticuloDetalleComponent } from './articulo-detalle/articulo-detalle.co
 import { ArticulosService } from './services/articulos.service';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
+import { AgregarArticuloComponent } from './agregar-articulo/agregar-articulo.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { from } from 'rxjs';
     HomeComponent,
     PerfilComponent,
     ArticuloDetalleComponent,
+    AgregarArticuloComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [UsuarioService, ArticulosService],
