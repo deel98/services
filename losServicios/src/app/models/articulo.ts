@@ -4,8 +4,3 @@ export class Articulo {
   title!: string;
   body!: string;
 }
-
-// titulo!: string;
-//   descripcion!: string;
-//   fecha!: Date;
-//   usuario!: string;
