@@ -12,6 +12,7 @@ import { ArticulosService } from './services/articulos.service';
 import { HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 import { AgregarArticuloComponent } from './agregar-articulo/agregar-articulo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,12 @@ import { AgregarArticuloComponent } from './agregar-articulo/agregar-articulo.co
     ArticuloDetalleComponent,
     AgregarArticuloComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [UsuarioService, ArticulosService],
   bootstrap: [AppComponent],
 })
