@@ -13,22 +13,29 @@ export class ArticulosService {
   constructor(private http: HttpClient) {}
 
   leerNoticias(): Observable<Articulo[]> {
-    return this.http.get<Articulo[]>(this.ruta + '/posts');
+    return this.http.get<Articulo[]>(`${this.ruta}/posts`);
   }
 
   leerUsuaurio(userId: number): Observable<User> {
-    return this.http.get<User>(this.ruta + '/users/' + userId);
+    return this.http.get<User>(`${this.ruta}/users/${userId}`);
   }
 
   leerTodosLosUsuarios(): Observable<User[]> {
-    return this.http.get<User[]>(this.ruta + '/users/');
+    return this.http.get<User[]>(`${this.ruta}/users/`);
   }
 
   guardarArticulo(articulo: Articulo): Observable<Articulo> {
-    return this.http.post<Articulo>(this.ruta + '/posts', articulo);
+    return this.http.post<Articulo>(`${this.ruta}/posts`, articulo);
   }
 
   borrarArticulo(id: number): Observable<any> {
-    return this.http.delete<any>(this.ruta + '/posts/' + id);
+    return this.http.delete<any>(`${this.ruta}/posts/${id}`);
+  }
+
+  actualizarArticulo(articulo: Articulo) {
+    return this.http.put<Articulo>(
+      `${this.ruta}/posts/${articulo.id}`,
+      articulo
+    );
   }
 }

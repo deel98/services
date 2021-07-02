@@ -45,4 +45,15 @@ export class HomeComponent implements OnInit {
       console.log('Datos eliminados correctamente');
     });
   }
+
+  actualizar(articulo: Articulo) {
+    articulo.title = 'este titulo ha sido editado';
+    articulo.body = 'este body ha sido editado';
+    this.ArticuloInyectado.actualizarArticulo(articulo).subscribe(
+      (articuloRecibido) => {
+        console.log(articuloRecibido);
+        console.log('los datos se ha actualizado correctamente');
+      }
+    );
+  }
 }
