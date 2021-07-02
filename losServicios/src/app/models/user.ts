@@ -6,5 +6,8 @@ export class User {
   email!: string;
   username!: string;
   address!: Address;
-  lat!: number;
+
+  constructor() {
+    this.address = new Address();
+  }
 }

@@ -38,4 +38,11 @@ export class HomeComponent implements OnInit {
     this.ArticuloInyectado.articulo = articulo;
     this.Ruta.navigateByUrl('/articulo-detalle');
   }
+
+  borrar(id: number) {
+    this.ArticuloInyectado.borrarArticulo(id).subscribe((datos) => {
+      console.log(datos);
+      console.log('Datos eliminados correctamente');
+    });
+  }
 }
