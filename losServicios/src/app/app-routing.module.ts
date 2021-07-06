@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ArticuloDetalleComponent,
   },
   {
-    path: 'agregar-articulo',
+    path: 'agregar-articulo/:esNuevo',
     component: AgregarArticuloComponent,
   },
 ];
